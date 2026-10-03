@@ -1,7 +1,7 @@
 {
   "version": 1,
   "project": "Flux",
-  "updated_at": "2026-10-03T19:03:16.067Z",
+  "updated_at": "2026-10-03T19:24:01.973Z",
   "statuses": [
     "pending",
     "in_progress",
@@ -21,7 +21,7 @@
       "id": "002",
       "title": "پیاده‌سازی دانلود تکی از لینک",
       "file": "tasks/002-single-download.json",
-      "status": "pending",
+      "status": "completed",
       "priority": "high",
       "dependencies": []
     },
