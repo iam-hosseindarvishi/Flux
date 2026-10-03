@@ -1,7 +1,7 @@
 {
   "version": 1,
   "project": "Flux",
-  "updated_at": null,
+  "updated_at": "2026-10-03T19:03:16.067Z",
   "statuses": [
     "pending",
     "in_progress",
@@ -13,7 +13,7 @@
       "id": "001",
       "title": "انتخاب استک و طراحی معماری",
       "file": "tasks/001-architecture.json",
-      "status": "pending",
+      "status": "completed",
       "priority": "high",
       "dependencies": []
     },

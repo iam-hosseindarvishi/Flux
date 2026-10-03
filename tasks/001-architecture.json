@@ -1,7 +1,7 @@
 {
   "id": "001",
   "title": "انتخاب استک و طراحی معماری",
-  "status": "pending",
+  "status": "completed",
   "priority": "high",
   "dependencies": [],
   "goal": "Define Rust/Tauri architecture, persistence, UI-core bridge, and initial repository structure.",
@@ -16,5 +16,6 @@
     "Core/UI boundary and persistence strategy are defined"
   ],
   "validation_commands": [],
-  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds.",
+  "updated_at": "2026-10-03T19:03:16.067Z"
 }
