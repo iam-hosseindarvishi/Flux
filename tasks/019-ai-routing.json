@@ -1,0 +1,20 @@
+{
+  "id": "019",
+  "title": "پیاده‌سازی AI تصمیم‌گیر برای محل ذخیره",
+  "status": "pending",
+  "priority": "low",
+  "dependencies": [],
+  "goal": "Add optional local/cloud AI routing for ambiguous files, with user correction feedback and an always-available non-AI fallback.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "AI is opt-in",
+    "Local model option is supported",
+    "User corrections override future routing"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

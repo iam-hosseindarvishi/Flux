@@ -1,0 +1,20 @@
+{
+  "id": "015",
+  "title": "پیاده‌سازی زمان‌بندی و کارهای بعد از دانلود",
+  "status": "pending",
+  "priority": "normal",
+  "dependencies": [],
+  "goal": "Add scheduled queue start/stop and post-download actions such as open, sleep, shutdown, or script execution with safety confirmation.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Schedules survive restart",
+    "Actions require explicit user configuration",
+    "Unsafe commands are clearly warned"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

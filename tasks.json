@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "project": "Flux",
+  "updated_at": null,
+  "statuses": [
+    "pending",
+    "in_progress",
+    "blocked",
+    "completed"
+  ],
+  "tasks": [
+    {
+      "id": "001",
+      "title": "انتخاب استک و طراحی معماری",
+      "file": "tasks/001-architecture.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "002",
+      "title": "پیاده‌سازی دانلود تکی از لینک",
+      "file": "tasks/002-single-download.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "003",
+      "title": "پیاده‌سازی دانلود چندکانکشنه با تقسیم پویا",
+      "file": "tasks/003-multi-connection.json",
+      "status": "pending",
+      "priority": "urgent",
+      "dependencies": []
+    },
+    {
+      "id": "004",
+      "title": "پیاده‌سازی قابلیت Resume دانلود",
+      "file": "tasks/004-resume.json",
+      "status": "pending",
+      "priority": "urgent",
+      "dependencies": []
+    },
+    {
+      "id": "005",
+      "title": "ساخت صف دانلود و دانلود دسته‌ای",
+      "file": "tasks/005-queue-batch.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "006",
+      "title": "پیاده‌سازی دسته‌بندی فایل‌ها بر اساس نوع",
+      "file": "tasks/006-file-categories.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "007",
+      "title": "پیاده‌سازی محدودیت سرعت دانلود",
+      "file": "tasks/007-speed-limit.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "008",
+      "title": "ساخت افزونه مرورگر و سینک کامل با برنامه",
+      "file": "tasks/008-browser-integration.json",
+      "status": "pending",
+      "priority": "urgent",
+      "dependencies": []
+    },
+    {
+      "id": "009",
+      "title": "پیاده‌سازی زیر نظر گرفتن کلیپ‌بورد",
+      "file": "tasks/009-clipboard.json",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": []
+    },
+    {
+      "id": "010",
+      "title": "طراحی UI با Google Stitch در ۵ تم",
+      "file": "tasks/010-ui-design.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "011",
+      "title": "پیاده‌سازی تشخیص سریال و مرتب‌سازی فصل و قسمت‌ها",
+      "file": "tasks/011-series-detection.json",
+      "status": "pending",
+      "priority": "urgent",
+      "dependencies": []
+    },
+    {
+      "id": "012",
+      "title": "ساخت تنظیمات اختصاصی مسیر ذخیره",
+      "file": "tasks/012-save-paths.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "013",
+      "title": "پیاده‌سازی Grabber برای سایت و ویدیو",
+      "file": "tasks/013-grabber.json",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": []
+    },
+    {
+      "id": "014",
+      "title": "پیاده‌سازی دانلود خودکار زیرنویس",
+      "file": "tasks/014-subtitles.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "015",
+      "title": "پیاده‌سازی زمان‌بندی و کارهای بعد از دانلود",
+      "file": "tasks/015-scheduler.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "016",
+      "title": "پیاده‌سازی تمدید لینک منقضی‌شده",
+      "file": "tasks/016-link-refresh.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "017",
+      "title": "پیاده‌سازی تشخیص فایل تکراری و checksum",
+      "file": "tasks/017-integrity-duplicates.json",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": []
+    },
+    {
+      "id": "018",
+      "title": "پیاده‌سازی پروکسی برای هر دانلود جدا",
+      "file": "tasks/018-proxy.json",
+      "status": "pending",
+      "priority": "normal",
+      "dependencies": []
+    },
+    {
+      "id": "019",
+      "title": "پیاده‌سازی AI تصمیم‌گیر برای محل ذخیره",
+      "file": "tasks/019-ai-routing.json",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": []
+    }
+  ]
+}

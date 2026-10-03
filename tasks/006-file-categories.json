@@ -1,0 +1,20 @@
+{
+  "id": "006",
+  "title": "پیاده‌سازی دسته‌بندی فایل‌ها بر اساس نوع",
+  "status": "pending",
+  "priority": "normal",
+  "dependencies": [],
+  "goal": "Categorize downloads by extension and MIME type and route each category to a configurable folder.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Built-in categories exist",
+    "Custom categories can be edited",
+    "Routing is deterministic"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "016",
+  "title": "پیاده‌سازی تمدید لینک منقضی‌شده",
+  "status": "pending",
+  "priority": "normal",
+  "dependencies": [],
+  "goal": "Refresh expired URLs using browser context or source page while preserving completed progress and validating file identity.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Expired state is detected",
+    "Refresh preserves progress",
+    "New resource identity is checked"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

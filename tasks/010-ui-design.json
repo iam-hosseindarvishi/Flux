@@ -1,0 +1,20 @@
+{
+  "id": "010",
+  "title": "طراحی UI با Google Stitch در ۵ تم",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Implement the Flux UI from the Stitch designs and design system across Dark, Light, Glass, Neumorphism, and AMOLED Cyber.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Main, add, batch, settings, series, and popup screens exist",
+    "All five themes work",
+    "Smart detection is visible on video rows"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

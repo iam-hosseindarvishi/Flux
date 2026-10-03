@@ -1,0 +1,20 @@
+{
+  "id": "005",
+  "title": "ساخت صف دانلود و دانلود دسته‌ای",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Parse many pasted URLs, preview them, enqueue them, support concurrency limits, reorder, and patterned URLs.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Batch input parses correctly",
+    "Queue order is editable",
+    "Per-queue concurrency works"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

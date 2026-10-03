@@ -1,0 +1,20 @@
+{
+  "id": "013",
+  "title": "پیاده‌سازی Grabber برای سایت و ویدیو",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Implement site crawling filters and media stream capture, integrating yt-dlp where appropriate and excluding DRM bypass.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Page/site links can be discovered with filters",
+    "HLS/DASH handling is defined and tested",
+    "DRM content is not claimed as supported"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

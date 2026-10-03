@@ -1,0 +1,20 @@
+{
+  "id": "018",
+  "title": "پیاده‌سازی پروکسی برای هر دانلود جدا",
+  "status": "pending",
+  "priority": "normal",
+  "dependencies": [],
+  "goal": "Support HTTP/SOCKS5 proxy globally, per download, and by domain rules.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Proxy settings are isolated per download",
+    "Domain rules work",
+    "Credentials are stored securely"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

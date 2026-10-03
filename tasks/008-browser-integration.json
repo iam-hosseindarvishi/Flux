@@ -1,0 +1,20 @@
+{
+  "id": "008",
+  "title": "ساخت افزونه مرورگر و سینک کامل با برنامه",
+  "status": "pending",
+  "priority": "urgent",
+  "dependencies": [],
+  "goal": "Build Chrome/Edge/Firefox extension integration through Native Messaging, including cookies, referer, user-agent, context menu, and media detection.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Extension sends downloads to desktop app",
+    "Authenticated downloads preserve required request metadata",
+    "Popup exposes active downloads"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

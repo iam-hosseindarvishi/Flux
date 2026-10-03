@@ -1,0 +1,20 @@
+{
+  "id": "003",
+  "title": "پیاده‌سازی دانلود چندکانکشنه با تقسیم پویا",
+  "status": "pending",
+  "priority": "urgent",
+  "dependencies": [],
+  "goal": "Implement HTTP Range multi-connection downloading with dynamic segment splitting, retries, and direct writes.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "1-32 connections are configurable",
+    "Segments retry independently",
+    "Completed output matches source checksum in tests"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

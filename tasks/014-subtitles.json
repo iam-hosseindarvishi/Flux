@@ -1,0 +1,20 @@
+{
+  "id": "014",
+  "title": "پیاده‌سازی دانلود خودکار زیرنویس",
+  "status": "pending",
+  "priority": "normal",
+  "dependencies": [],
+  "goal": "Download matching subtitles after media completion and save them beside the video with selectable languages.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Language selection works",
+    "Subtitle filename matches media",
+    "Failure does not fail the media download"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

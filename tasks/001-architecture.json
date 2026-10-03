@@ -1,0 +1,20 @@
+{
+  "id": "001",
+  "title": "انتخاب استک و طراحی معماری",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Define Rust/Tauri architecture, persistence, UI-core bridge, and initial repository structure.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Architecture document exists",
+    "Initial repository structure is documented",
+    "Core/UI boundary and persistence strategy are defined"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

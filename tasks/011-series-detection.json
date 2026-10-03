@@ -1,0 +1,20 @@
+{
+  "id": "011",
+  "title": "پیاده‌سازی تشخیص سریال و مرتب‌سازی فصل و قسمت‌ها",
+  "status": "pending",
+  "priority": "urgent",
+  "dependencies": [],
+  "goal": "Detect series, season, and episode from filenames and route files into a predictable library structure.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "S01E01 and 1x01 patterns work",
+    "Season folders are created",
+    "Low-confidence detection requests confirmation"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

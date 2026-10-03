@@ -1,0 +1,20 @@
+{
+  "id": "004",
+  "title": "پیاده‌سازی قابلیت Resume دانلود",
+  "status": "pending",
+  "priority": "urgent",
+  "dependencies": [],
+  "goal": "Persist segment state and resume safely after restart or network interruption using ETag/Last-Modified when available.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Interrupted downloads resume",
+    "Segment state survives restart",
+    "Changed remote files are detected"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "009",
+  "title": "پیاده‌سازی زیر نظر گرفتن کلیپ‌بورد",
+  "status": "pending",
+  "priority": "low",
+  "dependencies": [],
+  "goal": "Watch clipboard for downloadable links and offer single or batch import with an opt-out setting.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Valid links are detected",
+    "Multiple links open batch flow",
+    "Feature can be disabled"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

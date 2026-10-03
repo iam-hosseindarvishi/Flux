@@ -1,0 +1,20 @@
+{
+  "id": "002",
+  "title": "پیاده‌سازی دانلود تکی از لینک",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Implement HTTP/HTTPS/FTP single URL download with metadata detection and resume capability detection.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "URL starts a download",
+    "Filename, size, and MIME type are detected",
+    "Unsupported resume is surfaced"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}

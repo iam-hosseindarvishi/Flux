@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+target/
+
+# Build and test output
+dist/
+build/
+coverage/
+
+# Environment and local config
+.env
+.env.*
+!.env.example
+*.local
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Flux local state and logs
+.flux/
+*.log
+
+# Downloads and temporary files
+downloads/
+*.part
+*.aria2
+tmp/
+temp/
+
+# Secrets and certificates
+*.pem
+*.key
+*.p12
+
+# Generated local artifacts
+*.zip

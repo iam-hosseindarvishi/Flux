@@ -1,0 +1,20 @@
+{
+  "id": "012",
+  "title": "ساخت تنظیمات اختصاصی مسیر ذخیره",
+  "status": "pending",
+  "priority": "high",
+  "dependencies": [],
+  "goal": "Implement category and rule-based destination paths with tokens and live preview.",
+  "scope": [
+    "Implement the smallest production-ready slice of this feature.",
+    "Add tests for the critical behavior.",
+    "Update documentation when public behavior changes."
+  ],
+  "acceptance_criteria": [
+    "Per-category paths work",
+    "Pattern tokens render correctly",
+    "Preview matches final path"
+  ],
+  "validation_commands": [],
+  "notes": "Do not mark completed until all acceptance criteria pass and validation succeeds."
+}
