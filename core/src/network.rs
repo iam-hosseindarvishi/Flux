@@ -8,6 +8,12 @@ pub struct NetworkEngine {
     client: Client,
 }
 
+impl Default for NetworkEngine {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl NetworkEngine {
     pub fn new() -> Self {
         Self {
@@ -17,7 +23,6 @@ impl NetworkEngine {
                 .unwrap_or_default(),
         }
     }
-
     /// Fetches metadata for a given URL, falling back to GET if HEAD fails
     pub async fn fetch_metadata(&self, url: &str) -> Result<DownloadMetadata, Box<dyn Error>> {
         let parsed_url = Url::parse(url)?;
@@ -55,7 +60,7 @@ impl NetworkEngine {
             .headers()
             .get(reqwest::header::ACCEPT_RANGES)
             .and_then(|v| v.to_str().ok())
-            .map_or(false, |v| v.contains("bytes"));
+            .is_some_and(|v| v.contains("bytes"));
 
         let mut filename = res
             .headers()
@@ -73,8 +78,8 @@ impl NetworkEngine {
             });
 
         if filename.is_none() {
-            if let Some(segments) = parsed_url.path_segments() {
-                if let Some(last) = segments.last() {
+            if let Some(mut segments) = parsed_url.path_segments() {
+                if let Some(last) = segments.next_back() {
                     if !last.is_empty() {
                         filename = Some(last.to_string());
                     }
@@ -119,9 +124,9 @@ impl NetworkEngine {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use tokio::test;
+    use mockito::Server;
 
-    #[test]
+    #[tokio::test]
     async fn test_sanitize_filename() {
         assert_eq!(NetworkEngine::sanitize_filename("valid.txt"), "valid.txt");
         assert_eq!(
@@ -133,5 +138,70 @@ mod tests {
             NetworkEngine::sanitize_filename("invalid|name?.txt"),
             "invalid_name_.txt"
         );
+    }
+
+    #[tokio::test]
+    async fn test_fetch_metadata_head_success() {
+        let mut server = Server::new_async().await;
+        let mock = server.mock("HEAD", "/")
+            .with_status(200)
+            .with_header("Content-Length", "1024")
+            .with_header("Content-Type", "application/pdf")
+            .with_header("Accept-Ranges", "bytes")
+            .with_header("Content-Disposition", "attachment; filename=\"test.pdf\"")
+            .create_async().await;
+
+        let engine = NetworkEngine::new();
+        let metadata = engine.fetch_metadata(&server.url()).await.unwrap();
+
+        mock.assert_async().await;
+        assert_eq!(metadata.size, Some(1024));
+        assert_eq!(metadata.mime_type.as_deref(), Some("application/pdf"));
+        assert_eq!(metadata.supports_resume, true);
+        assert_eq!(metadata.filename.as_deref(), Some("test.pdf"));
+    }
+
+    #[tokio::test]
+    async fn test_fetch_metadata_get_fallback() {
+        let mut server = Server::new_async().await;
+        let head_mock = server.mock("HEAD", "/")
+            .with_status(405) // Method not allowed
+            .create_async().await;
+        
+        let get_mock = server.mock("GET", "/")
+            .with_status(200)
+            .with_body("hello")
+            .create_async().await;
+
+        let engine = NetworkEngine::new();
+        let metadata = engine.fetch_metadata(&server.url()).await.unwrap();
+
+        head_mock.assert_async().await;
+        get_mock.assert_async().await;
+        assert_eq!(metadata.size, Some(5));
+    }
+
+    #[tokio::test]
+    async fn test_unsupported_scheme() {
+        let engine = NetworkEngine::new();
+        let result = engine.fetch_metadata("file:///etc/passwd").await;
+        assert!(result.is_err());
+        assert_eq!(result.unwrap_err().to_string(), "Only HTTP and HTTPS protocols are supported");
+    }
+
+    #[tokio::test]
+    async fn test_redirect_limit() {
+        let mut server = Server::new_async().await;
+        let url = server.url();
+        let mock = server.mock("HEAD", "/")
+            .with_status(302)
+            .with_header("Location", &url) // infinite loop redirect
+            .expect_at_least(1)
+            .create_async().await;
+
+        let engine = NetworkEngine::new();
+        let result = engine.fetch_metadata(&url).await;
+        mock.assert_async().await;
+        assert!(result.is_err());
     }
 }
